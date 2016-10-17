@@ -51,7 +51,6 @@ class BurpExtender(IBurpExtender, ISessionHandlingAction):
         # Update token in request header
         if token:
             requestHeaders = requestInfo.getHeaders()
-            print range(len(requestHeaders))
             for i in range(len(requestHeaders)):
                 requestHeader = str(requestHeaders[i])
                 if requestHeader.startswith('X-CSRF-TOKEN'):
